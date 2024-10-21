@@ -10,6 +10,7 @@ function Home() {
       <Navbar />
       <div className="main">
         {/* Main content can go here */}
+        <h1>auto deploy sucess</h1>
       </div>
       <div className="right_calendar">
         {/* Calendar or other right content */}
