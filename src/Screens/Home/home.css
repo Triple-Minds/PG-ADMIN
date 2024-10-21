@@ -1,0 +1,40 @@
+.home
+{
+    background-color: var(--backgroud-color);
+    display: flex;
+    
+}
+
+  
+.left_navbar
+{
+background-color: #fff;
+width: 20%;
+height: 100vh;
+}
+.logo_name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main
+{
+
+}
+
+.right_calender
+{
+}
+
+.pages
+{
+
+}
+
+.pages_elements
+{
+
+}
