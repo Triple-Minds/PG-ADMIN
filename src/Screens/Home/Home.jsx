@@ -1,9 +1,21 @@
-import React from 'react'
-import "./home.css"
+import React, { useState } from 'react';
+import './home.css';
+import Navbar from '../../Components/Navbar';
+
 function Home() {
+  
+
   return (
-    <div>Home</div>
-  )
+    <div className="home">
+      <Navbar />
+      <div className="main">
+        {/* Main content can go here */}
+      </div>
+      <div className="right_calendar">
+        {/* Calendar or other right content */}
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
