@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --backgroud-color:#000;
   --background-frame:#191C24;
@@ -12,7 +17,3 @@
 
 }
 
-*{
-  padding: 0px;
-  margin: 0px;
-}
