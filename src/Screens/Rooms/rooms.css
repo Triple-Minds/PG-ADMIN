@@ -1,0 +1,134 @@
+.rooms_bg{
+    /* background: red; */
+    height: 100vh;
+    display: flex;
+}
+
+.rooms_main_container{
+    width: 83%;
+    height: 100%;
+    /* background: green; */
+}
+.rooms_topNav{
+    height: 10%;
+    width: 100%;
+    /* background: pink; */
+}
+.rooms_main{
+    width: 100%;
+    height: 90%;
+    background: #191C24;
+}
+.floors_title{
+    width: 100%;
+    height: 10%;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+
+
+/* App Container */
+.app-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.filters-section {
+  width: 20%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-right: 2px solid #ddd;
+}
+
+.main-section {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Floor Selection */
+.floor-selection {
+  margin-top: 20px;
+}
+
+.floor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.floor-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.floor-card:hover {
+  background-color: #e0f7fa;
+  border-color: #007bff;
+}
+
+/* Room Display */
+.room-display {
+  margin-top: 20px;
+}
+
+.room-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.room-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 200px;
+  text-align: left;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.room-card.full {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.room-card.partially-full {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.room-card.empty {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.room-card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filters label {
+  font-weight: bold;
+}
+
+.filters select, .filters input[type="range"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.filters input[type="range"] {
+  width: 100%;
+}
