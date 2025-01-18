@@ -6,8 +6,12 @@ import Chart from './ChartDiv';
 import { formatDistanceToNow } from 'date-fns';
 import Calender from './Calender';
 import Chat from './Chat';
+import { useNavigate } from "react-router-dom";
+
 
 function Home() {
+    const navigate = useNavigate();
+  
   const name = "Sameer";
   const [isNotificationEnabled,setNotificationsEnabled] = useState(false);
   
@@ -58,18 +62,65 @@ function Home() {
     },
   ];
   
+  
+
   const tickets = [
-    { name: 'Sameer', roomNO: '205', createdAt: Date.now() - 600000 }, // 10 minutes ago
-    { name: 'Ali', roomNO: '302', createdAt: Date.now() - 3600000 },  // 1 hour ago
-    { name: 'Sara', roomNO: '101', createdAt: Date.now() - 86400000 }, // 1 day ago
+    {
+      userId: "1",
+      userName: "John Doe",
+      userRoomNo: "101",
+      ticketId: "T001",
+      ticketDescription: "Light bulb needs replacement",
+      ticketPriority: "High",
+      ticketType: "electrical",
+      isSolved: false,
+      createdDate: "2025-01-01",
+      solvedBy: "",
+      expectedSolveDate: "2025-01-05",
+      status: "in-progress",
+      roomId: "R101",
+      roomName: "Room 101",
+    },
+    {
+      userId: "2",
+      userName: "Jane Smith",
+      userRoomNo: "102",
+      ticketId: "T002",
+      ticketDescription: "Leaky faucet in the bathroom",
+      ticketPriority: "Medium",
+      ticketType: "plumbing",
+      isSolved: true,
+      createdDate: "2025-01-02",
+      solvedBy: "Mike",
+      expectedSolveDate: "2025-01-06",
+      status: "completed",
+      roomId: "R102",
+      roomName: "Room 102",
+    },
+    {
+      userId: "3",
+      userName: "Emily Davis",
+      userRoomNo: "103",
+      ticketId: "T003",
+      ticketDescription: "Broken chair in the study room",
+      ticketPriority: "Low",
+      ticketType: "furniture",
+      isSolved: false,
+      createdDate: "2025-01-03",
+      solvedBy: "",
+      expectedSolveDate: "2025-01-07",
+      status: "in-progress",
+      roomId: "R103",
+      roomName: "Room 103",
+    },
+ 
+   
   ];
+
   const [selectedMonth, setSelectedMonth] = useState('');
   const [monthData, setMonthData] = useState({});
 
-  const handleViewMore = (ticket) => {
-    console.log('View more details for:', ticket);
-    // You can handle the view more action (e.g., navigate to a detailed page or show a modal)
-  };
+ 
 
   const handleMonthChange = (event) => {
     const selectedMonth = event.target.value;
@@ -78,6 +129,10 @@ function Home() {
     setMonthData(monthData);
   };
   
+  const handleViewMore = (ticket) => {
+    navigate(`/ticket/${ticket.ticketId}`, { state: { ticket } });
+    console.log('View more details for:', ticket);
+  };
 
   return (
     <div className="home">
@@ -129,9 +184,9 @@ function Home() {
             {tickets.map((ticket, index) => (
               <div key={index} className="ticketItem">
                 <div className="ticketDetails">
-                  <div style={{display:'flex',gap:'5px'}} className='ticketFont'><h4 >Name: </h4><span>{ticket.name}</span></div>
-                  <p className='ticketFont'>Room: {ticket.roomNO}</p>
-                  <p className='ticketFont'>Created {formatDistanceToNow(new Date(ticket.createdAt))} ago</p>
+                  <div style={{display:'flex',gap:'5px'}} className='ticketFont'><h4 >Name: </h4><span>{ticket.userName}</span></div>
+                  <p className='ticketFont'>Room: {ticket.roomName}</p>
+                  <p className='ticketFont'>Created {formatDistanceToNow(new Date(ticket.createdDate))} ago</p>
                 </div>
                 <button onClick={() => handleViewMore(ticket)} className="viewMoreBtn">
                 View More

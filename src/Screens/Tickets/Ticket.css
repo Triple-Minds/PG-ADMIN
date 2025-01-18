@@ -1,0 +1,127 @@
+.ticket{
+    background-color: var(--backgroud-color);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    font-family: Arial, sans-serif;
+    background-color: var(--main-background-color);
+}
+
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .search-input,
+  .select-dropdown {
+    padding: 10px;
+    font-size: 14px;
+    width: 80%;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-self: center;
+  }
+
+  .search-input:focus,
+  .select-dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  .checkbox-filters > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .checkbox-label {
+    font-size: var(--font-size);
+    cursor: pointer;
+    padding: 10px 5px;
+    color: white;
+  }
+
+  .ticket-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .ticket-card {
+    background: #1e1e1e;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .ticket-card  {
+    margin-top: 0;
+    color: #007bff;
+  }
+
+  .ticket-card button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .ticket-card button:hover {
+    background-color: #0056b3;
+  }
+
+  .filter-label {
+    color: #ffffff;
+    font-size: var(--subtitle-fontsize);
+  }
+
+  .no-tickets {
+    text-align: center;
+    color: #999;
+  }
+
+
+  .ticket-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+    align-items: center;
+    margin-top: 10px;
+  }
+
+.ticket-container  {
+    display: flex;
+    background-color: var(--main-background-color);
+    width: 80%;
+  }
+
+  .filter-options {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+    width: 20%;
+    justify-content: flex-start;
+    padding: 1%;
+    margin-top: 5%;
+  }

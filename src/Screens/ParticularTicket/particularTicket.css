@@ -1,0 +1,92 @@
+.particular-ticket {
+    padding: 2rem;
+    flex-grow: 1;
+  }
+  
+  .ticket-header h1 {
+    font-size: 2rem;
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ticket-details {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #e0e0e0;
+    max-width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ticket-details p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+  }
+  
+  .ticket-details strong {
+    color: #00bcd4;
+  }
+  
+  .priority {
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .priority.high {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .priority.medium {
+    background-color: #ffa000;
+    color: black;
+  }
+  
+  .priority.low {
+    background-color: #388e3c;
+    color: white;
+  }
+  
+  .status {
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+  
+  .status.in-progress {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .status.completed {
+    background-color: #388e3c;
+    color: white;
+  }
+  
+  .status.cancelled {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .update-status {
+    margin-top: 1rem;
+  }
+  
+  .status-dropdown {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #2a2a2a;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .status-dropdown:focus {
+    border-color: #00bcd4;
+  }
+  

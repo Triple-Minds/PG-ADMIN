@@ -2,12 +2,21 @@ import React, { useState } from 'react'
 import '../Screens/Home/home.css';
 import logo from '../Assets/logo.jpg';
 import { FaHome, FaUserFriends, FaDoorOpen, FaUtensils, FaTicketAlt, FaMoneyBillWave,FaQuestionCircle, FaSignOutAlt } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
     const [activePage, setActivePage] = useState('home');
+    const navigate = useNavigate();
 
     const handleClick = (page) => {
         setActivePage(page);
+        if(page === 'tickets'){
+          navigate(`/ticket`);
+        }
+        else if(page === 'home'){
+          navigate(`/`);  
+        }
     };
   return (
     <div className="left_navbar">

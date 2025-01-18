@@ -8,6 +8,7 @@ import { Rooms } from './Screens/Rooms/Rooms';
 import { Ticket } from './Screens/Tickets/Ticket';
 import { Payment } from './Screens/Payment/Payment';
 import { Food } from './Screens/Food/Food';
+import ParticularTicket from './Screens/ParticularTicket/ParticularTicket';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
              <Route path='/ticket'element={<Ticket />} />
              <Route path='/payment'element={<Payment />} />
              <Route path='/food'element={<Food />} />
+             <Route path="/ticket/:id" element={<ParticularTicket />} />
       </Routes>
       </BrowserRouter>
     </div>
