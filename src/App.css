@@ -14,6 +14,9 @@
   --support-yellow:#FFC107;
   --font-color:#fff;
   --highlight-color:grey;
-
+  --welcome-fontsize:0.8em;
+  --subtitle-fontsize:1.4em;
+  --main-background-color:#22252e;
+  --box-color : rgb(61, 61, 68);
 }
 
