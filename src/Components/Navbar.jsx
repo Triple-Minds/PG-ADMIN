@@ -10,12 +10,17 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const handleClick = (page) => {
-        setActivePage(page);
         if(page === 'tickets'){
+          setActivePage('tickets');
           navigate(`/ticket`);
         }
         else if(page === 'home'){
+          setActivePage('home');
           navigate(`/`);  
+        }
+        else if(page === 'payment'){
+          setActivePage('payment');
+          navigate(`/payment`);  
         }
     };
   return (

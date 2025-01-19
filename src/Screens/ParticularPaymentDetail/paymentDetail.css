@@ -1,0 +1,4 @@
+.payment-detail{
+    background-color: var(--backgroud-color);
+    display: flex;
+  }

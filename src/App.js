@@ -9,6 +9,7 @@ import { Ticket } from './Screens/Tickets/Ticket';
 import { Payment } from './Screens/Payment/Payment';
 import { Food } from './Screens/Food/Food';
 import ParticularTicket from './Screens/ParticularTicket/ParticularTicket';
+import PaymentDetail from './Screens/ParticularPaymentDetail/PaymentDetail';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
              <Route path='/payment'element={<Payment />} />
              <Route path='/food'element={<Food />} />
              <Route path="/ticket/:id" element={<ParticularTicket />} />
+             <Route path="/paymentDetail/:id" element={<PaymentDetail />} />
       </Routes>
       </BrowserRouter>
     </div>

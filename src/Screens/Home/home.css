@@ -1,7 +1,7 @@
 /* Main container */
 .home {
-    background-color: var(--backgroud-color);
-    display: flex;
+  background-color: var(--backgroud-color);
+  display: flex;
 }
 
 .left_navbar {
