@@ -1,134 +1,442 @@
-.rooms_bg{
-    /* background: red; */
-    height: 100vh;
-    display: flex;
-}
-
-.rooms_main_container{
-    width: 83%;
-    height: 100%;
-    /* background: green; */
-}
-.rooms_topNav{
-    height: 10%;
-    width: 100%;
-    /* background: pink; */
-}
-.rooms_main{
-    width: 100%;
-    height: 90%;
-    background: #191C24;
-}
-.floors_title{
-    width: 100%;
-    height: 10%;
-    /* position: relative; */
-    display: flex;
-    justify-content: center;
-    color: aliceblue;
-}
-
-
-/* App Container */
-.app-container {
+/* General Styles */
+.rooms-background {
+  height: 100vh;
   display: flex;
-  font-family: Arial, sans-serif;
 }
 
-.filters-section {
-  width: 20%;
+.rooms-main-container {
+  width: 83%;
+  height: 100%;
+  background: #191C24;
+  color: #ffffff;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-right: 2px solid #ddd;
+  overflow-y: auto;
 }
 
-.main-section {
-  width: 80%;
-  padding: 20px;
-  text-align: center;
+/* Rooms Feature Styles */
+.rooms-feature-container {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
 }
 
-/* Floor Selection */
-.floor-selection {
-  margin-top: 20px;
-}
-
-.floor-cards {
-  display: flex;
-  justify-content: center;
+/* --- Floor Selection Container Styles --- */
+.floor-selection-container {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #1a1d26; /* Background specific to floor selection */
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
+.room-selection-container {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; Space between cards */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 10px;
+  background-color: #1a1d26;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+.room-selection-header-container{
+  width: 100%;
+  height:20%;
+  /* background: red; */
+  display: flex;
+  gap: 30%;
+}
+
+
+/* --- Floor Card Container Styles --- */
+.floor-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* --- Room Card Container Styles --- */
+.room-cards-container {
+  width: 100%;
+  height: 80%;
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  /* background: red; */
+}
+
+/* --- Occupant Card Container Styles --- */
+.occupant-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* --- Floor Card Styles --- */
 .floor-card {
-  padding: 20px;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 0.3s ease;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #242731;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%; /* Ensure it takes the full width of the grid item */
+  max-width: 650px; /* Max width of each card */
+  height: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .floor-card:hover {
-  background-color: #e0f7fa;
-  border-color: #007bff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
 }
 
-/* Room Display */
-.room-display {
-  margin-top: 20px;
+.floor-card-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.room-cards {
+/* Room Card Styling */
+.room-card {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #242731;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+.room-no-container {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.room-image-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.room-card {
-  padding: 20px;
-  border: 1px solid #ddd;
-  width: 200px;
+.room-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.room-details-container {
   text-align: left;
-  border-radius: 10px;
-  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.room-card.full {
-  background-color: #f8d7da;
-  border-color: #dc3545;
+.room-type,
+.room-sharing,
+.room-rent,
+.room-status {
+  margin: 0;
 }
 
-.room-card.partially-full {
-  background-color: #fff3cd;
-  border-color: #ffc107;
+.view-room-button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
-.room-card.empty {
-  background-color: #d4edda;
-  border-color: #28a745;
+.view-room-button:hover {
+  background-color: #0056b3;
 }
 
-.room-card:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+.room-card .occupancy-icons-container {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
-/* Filters */
-.filters {
+.occupant-icon {
+  font-size: 20px;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-occupied {
+  background-color: lightblue;
+  color: black;
+}
+
+.icon-vacant {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+
+/* --- Occupant Card Styles --- */
+.occupant-card {
+  border: 1px solid #555;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: #2a2e39;
+}
+
+.occupant-card button {
+  margin-top: 10px;
+  background-color: #ffc107;
+  color: #000;
+}
+
+.occupant-card button:hover {
+  background-color: #e0a800;
+}
+
+/* --- Buttons --- */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Back to Floors Button */
+.back-to-floors-button {
+  background-color: #6c757d;
+  color: #fff;
+  height: 50px;
+}
+
+.back-to-floors-button:hover {
+  background-color: #5a6268;
+}
+
+
+
+.room-details-container-per-room {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color:#242731;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+/* Header */
+.room-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-details-title {
+  font-size: 24px;
+  font-weight: bold;
+  /* color: #fff; */
+}
+
+.back-to-rooms-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-to-rooms-button:hover {
+  background-color: #0056b3;
+}
+
+/* Room Details Section */
+.room-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-details-section p {
+  font-size: 16px;
+}
+
+/* Occupants List Container */
+.occupants-list-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.filters label {
+.occupants-list-title {
+  font-size: 20px;
   font-weight: bold;
+
 }
 
-.filters select, .filters input[type="range"] {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.occupant-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.filters input[type="range"] {
+.occupant-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  /* color: #555; */
+}
+
+.view-payment-details-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-payment-details-button:hover {
+  background-color: #218838;
+}
+
+/* No Occupants Message */
+.no-occupants-message {
+  font-size: 16px;
+  /* color: #999; */
+  font-style: italic;
+}
+
+.add-occupant-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-occupant-button:hover {
+  background-color: #218838;
+}
+
+.add-occupant-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color:#242731;
+  /* background: white; */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.popup-content input, 
+.popup-content select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-actions button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-actions button:nth-child(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+.popup-actions button:nth-child(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+/* Titles */
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
 }

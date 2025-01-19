@@ -1,0 +1,172 @@
+/* Basic layout for the background and container */
+.users-background {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #10131F; /* Dark background color */
+}
+
+.users-container {
+    width: 83%;
+    height: 100%;
+    background: #191C24; /* Dark container background */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Styling for the header section containing search bar and filters */
+.users-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-filter-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 250px;
+    background-color: #2C2F3A;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #3D8CFF;
+}
+
+.filter-dropdown {
+    padding: 10px;
+    background-color: #2C2F3A;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-dropdown:focus {
+    outline: none;
+    border-color: #3D8CFF;
+}
+
+/* Styling for the user table */
+.user-table-container {
+    margin-top: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #444;
+}
+
+.user-table th, .user-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.user-table th {
+    background-color: #2C2F3A;
+    font-weight: bold;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #2C2F3A;
+}
+
+.user-table tbody tr:nth-child(odd) {
+    background-color: #242A32;
+}
+
+.user-table tbody tr:hover {
+    background-color: #3A3F48; /* Slight hover effect */
+}
+
+.user-table td {
+    border-bottom: 1px solid #444;
+}
+
+/* Styling for the buttons in the table */
+.user-table button {
+    background-color: #007bff; /* Blue color for buttons */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding inside the button */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background-color transition */
+}
+
+/* Hover effect */
+.user-table button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Focus effect */
+.user-table button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px #0056b3; /* Add a subtle focus ring */
+}
+
+/* Disabled button style */
+.user-table button:disabled {
+    background-color: #d6d6d6; /* Light gray for disabled state */
+    color: #a1a1a1; /* Gray text for disabled state */
+    cursor: not-allowed; /* Show "not allowed" cursor for disabled buttons */
+}
+
+/* Align buttons properly in table cells */
+.user-table td button {
+    display: inline-block;
+    margin: 0 auto; /* Center buttons horizontally in table cells */
+}
+
+/* Pagination section */
+.pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3D8CFF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+    background-color: #2D74D4; /* Slight color change on hover */
+}
+
+.pagination-button:disabled {
+    background-color: #2C2F3A;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: #B4B4B4;
+}
+
