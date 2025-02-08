@@ -8,6 +8,8 @@ import  Rooms  from './Screens/Rooms/Rooms';
 import { Ticket } from './Screens/Tickets/Ticket';
 import { Payment } from './Screens/Payment/Payment';
 import { Food } from './Screens/Food/Food';
+import Floors from './Screens/Rooms/Floors';
+import SingleRoom from './Screens/Rooms/SingleRoom';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
              <Route path='/ticket'element={<Ticket />} />
              <Route path='/payment'element={<Payment />} />
              <Route path='/food'element={<Food />} />
+            <Route path="/rooms/:floorId" element={<Floors />} />
+            <Route path="/rooms/:floorId/:roomId" element={<SingleRoom/>} />
       </Routes>
       </BrowserRouter>
     </div>
